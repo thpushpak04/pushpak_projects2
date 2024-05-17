@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+int main() {                      // this allocation of variables for throughout the program
     int STONE = 1;
     int PAPER = 2;
     int SCISSOR = 3;
@@ -18,14 +18,14 @@ int main() {
 
     do {
         cout << "******************************************MENU********************************************" << endl;
-        cout << "STONE (Write 1)" << endl;
+        cout << "STONE (Write 1)" << endl;                 // menu driven for output
         cout << "PAPER (Write 2)" << endl;
         cout << "SCISSOR (Write 3)" << endl<<endl;
         cout << "*********************************************choice******************************" << endl;
 
         computerChoice = rand() % 3 + 1;
 
-        cout << "Enter your choice: ";
+        cout << "Enter your choice: ";         // input 
         cin >> userChoice;
 
         if (userChoice < 1 || userChoice > 3) {
@@ -50,7 +50,7 @@ int main() {
         if (userChoice == computerChoice) {
             cout << "It's a tie!" << endl;
         } else if ((userChoice == STONE && computerChoice == SCISSOR) ||
-                   (userChoice == PAPER && computerChoice == STONE) ||
+                   (userChoice == PAPER && computerChoice == STONE) ||               // logical checking
                    (userChoice == SCISSOR && computerChoice == PAPER)) {
             cout << "You won!" << endl;
         } else {
@@ -58,7 +58,7 @@ int main() {
         }
 
         cout << "Do you want to play again? (y/n): ";
-        cin >> playAgain;
+        cin >> playAgain;                                    // user permission for repeat the game
 
     } while (playAgain == 'y' || playAgain == 'Y');
 
